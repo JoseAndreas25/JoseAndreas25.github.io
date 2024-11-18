@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var randomNumber = Math.floor(Math.random() * 100);
+
+        
+        for (var i = 0; i < 3; i = i + 1){
+            var guessNumber = prompt("Guess my favorite number");
+
+            if (guessNumber === "" || guessNumber === null){
+                alert("Please type a number");
+                i --;
+                continue;
+            }
+            guessNumber = parseInt(guessNumber);
+
+            if (guessNumber === randomNumber){
+                document.write("Congrats, you are correct. My favorite number is " + randomNumber);
+                break;
+            }
+
+            else {
+                if (guessNumber < randomNumber){
+                    alert("Too small");
+                }
+
+                else{
+                    alert("Too large");
+                }
+            }
+
+            if (i === 2){
+                document.write("3 Tries. My favorite number is " + randomNumber);
+            }
+            
+        }
+
+
+    </script>
+
+</body>
+</html>
