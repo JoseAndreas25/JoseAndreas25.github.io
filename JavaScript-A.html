@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <script>
+            var name = prompt ('What is your name')        
+            document.write("hello " + name +'<br>')
+            var x = Number(prompt ('Apa angka kesukaan kamu?'))
+            var y = Number(prompt ('Apa tanggal lahir kamu?'))
+            document.write('The sum of  ' + x + ' And ' + y + ' is ' + (x+y)+'<br>')
+            var a = Number(prompt ('Selesaikan Kuadrat di bawah ini'))
+            var b = Number(prompt ('Selesaikan Kuadrat ke 2 di bawah ini'))
+            var c = Number(prompt ('Selesaikan Kuadrat 3 di bawah ini'))
+            var Hasil1 =(-b + Math.sqrt(b**2 - 4*a*c))/2*a
+            var Hasil2 =(-b - Math.sqrt(b**2 - 4*a*c))/2*a
+            document.write('The solutions of ' + a + ' x^2+ '+ b + ' x+ '+c + ' = 0 are x = '+Hasil1 + ' and x = '+ Hasil2)
+        </script>
+    </body>
+</html>
