@@ -3,42 +3,147 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Elite Laundry — Kontak</title>
+  <title>Kontak — Elite Laundry</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <nav>
-        <h1 class="logo">Elite Laundry</h1>
-        <ul>
-          <li><a href="index.html">Beranda</a></li>
-          <li><a href="layanan.html">Layanan</a></li>
-          <li><a href="galeri.html">Galeri</a></li>
-          <li><a href="kontak.html" class="active">Kontak</a></li>
-        </ul>
-      </nav>
+
+<header>
+  <div class="container">
+    <nav>
+      <h1 class="logo">Elite Laundry</h1>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="layanan.html">Layanan</a></li>
+        <li><a href="galeri.html">Galeri</a></li>
+        <li><a href="kontak.html" class="active">Kontak</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== HERO KONTAK ===== -->
+<section class="kontak-hero">
+  <h2>Hubungi <span>Elite Laundry</span></h2>
+  <p>Kami siap membantu Anda dengan pelayanan terbaik dan respon cepat.</p>
+</section>
+
+<main class="kontak-container">
+
+  <div class="kontak-info reveal">
+    <h3>Informasi Kontak</h3>
+    <p>Anda dapat menghubungi kami melalui formulir atau kontak di bawah ini:</p>
+
+    <p><strong>📍 Alamat:</strong> Jl. S. Parman, Medan, Sumatra Utara</p>
+    <p><strong>📞 Telepon:</strong> <a href="tel:+6285185189428">+6285185189428</a></p>
+    <p><strong>📧 Email:</strong> <a href="mailto:elitecleanlaundry@gmail.com">elitecleanlaundry@gmail.com</a></p>
+    <p><strong>⏰ Jam Operasional:</strong> Setiap Hari — 08:00 - 20:00 WIB</p>
+
+    <div class="sosmed">
+      <a href="#">🌐</a>
+      <a href="#">📘</a>
+      <a href="#">📸</a>
     </div>
-  </header>
+  </div>
 
-  <main>
-    <section class="section">
-      <h2>Hubungi Kami</h2>
-      <div class="contact-box card">
-        <p><strong>Alamat:</strong> Jl. Merdeka No.45, Jakarta Selatan</p>
-        <p><strong>Telepon / WA:</strong> <a href="https://wa.me/6281234567890">+62 812-3456-7890</a></p>
-        <p><strong>Email:</strong> <a href="mailto:elitelaudry@gmail.com">elitelaudry@gmail.com</a></p>
-        <div style="margin-top:16px;">
-          <a class="btn" href="https://wa.me/6281234567890">Chat via WhatsApp</a>
-        </div>
+  <div class="kontak-form reveal">
+    <h3>Kirim Pesan</h3>
+    <form onsubmit="sendWhatsApp(); return false;">
+    <input type="text" id="nama" placeholder="Nama Lengkap" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <textarea id="pesan" placeholder="Pesan" required></textarea>
+    <button type="submit" class="btn-wa">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" 
+         alt="WA" style="width:22px;">
+    <span>Kirim Pesan via WhatsApp</span>
+</button>
+
+</form>
+
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-container">
+    
+    <!-- Kolom 1 -->
+    <div class="footer-col">
+      <img src="g:\Semester 3 Jose\Sir Paulus ComputerScience\Elite Logo.jpg" class="footer-logo">
+      <p>
+        Elite Laundry membantu rumah, bisnis, dan instansi dengan layanan laundry premium,
+        modern, rapi, dan efisien.
+      </p>
+
+      <a href="https://wa.me/6285185189428" target="_blank" class="wa-btn">
+        💬 Hubungi Kami via WhatsApp
+      </a>
+    </div>
+
+    <!-- Kolom 2 -->
+    <div class="footer-col">
+      <h3>Layanan</h3>
+      <ul>
+        <li>Cuci Lipat</li>
+        <li>CUKER (Cuci + Setrika)</li>
+        <li>CUKERLIP (Cuci, Kering, Lipat & Setrika Premium)</li>
+        <li>Express 1 Hari</li>
+        <li>Antar Jemput</li>
+      </ul>
+    </div>
+
+    <!-- Kolom 3 -->
+    <div class="footer-col">
+      <h3>Informasi</h3>
+      <ul>
+        <li><a href="layanan.html">Layanan Kami</a></li>
+        <li><a href="galeri.html">Galeri</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </div>
+
+    <!-- Kolom 4 -->
+    <div class="footer-col">
+      <h3>Ikuti Kami</h3>
+      <div class="social-links">
+        <a href="#"><div class="icon">f</div></a>
+        <a href="#"><div class="icon">📸</div></a>
+        <a href="#"><div class="icon">in</div></a>
       </div>
-    </section>
-  </main>
+    </div>
 
-  <footer>
-    <p>© 2025 Elite Laundry.</p>
-  </footer>
+  </div>
 
-  <script src="script.js"></script>
+  <div class="footer-bottom">
+    © 2025 Elite Laundry. Semua Hak Dilindungi.
+  </div>
+</footer>
+
+
+<script src="script.js"></script>
+<script>
+function sendWhatsApp() {
+    let nama = document.getElementById("nama").value;
+    let email = document.getElementById("email").value;
+    let pesan = document.getElementById("pesan").value;
+
+    // NOMOR TUJUAN
+    let nomorWA = "6285185189428"; // 👉 ganti ke nomor kamu
+
+    // Format pesan WA
+    let text = 
+        "*Pesan Baru Dari Website Elite Laundry*" +
+        "%0A------------------------------%0A" +
+        "*Nama:* " + nama + "%0A" +
+        "*Email:* " + email + "%0A" +
+        "*Pesan:* %0A" + pesan + "%0A";
+
+    // buka WhatsApp
+    let url = "https://wa.me/" + nomorWA + "?text=" + text;
+
+    window.open(url, "_blank");
+}
+</script>
+
 </body>
 </html>
